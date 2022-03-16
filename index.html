@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/d3@4.13.0/build/d3.js"
+      integrity="sha256-j2LsvgOlQFIb2Mphb+tX7d5pNmFdpsJU+s5GNo3z63g="
+      crossorigin="anonymous"
+    ></script>
+    <link href="src/css/App.css" rel="stylesheet" type="text/css" />
+    <title>DIVE INTO FILM INDUSTRY</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>DIVE INTO FILM INDUSTRY</h1>
+      <div class="img-box"></div>
+
+      <div class="chart1-box">
+        <h2>Select the genre you're interested in and to see how profitable it is.</h2>
+        <div class="chart-row" style="display: flex;">
+          <div class="select-box" style="margin-top: 40px;">
+            <!-- filled by js -->
+            <!-- <div class="select-item">ACTION</div> -->
+            <!-- <div class="select-item selected">ACTION SELECTED</div> -->
+          </div>
+
+          <div class="chart1">
+            <div class="chart-title">Movies types against there net profit</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart2-box">
+        <h2>Do you know which production company take the most market share?</h2>
+
+        <div class="chart-row" style="display: flex;">
+          <div class="chart-guess">
+            <h4>TAKE A GUESS!</h4>
+            <div class="select-box" style="display: flex; margin-top: 20px;">
+              <!-- filled by js -->
+              <!-- <div class="select-item"><div></div></div> -->
+              <!-- <div class="select-item selected"><div></div></div> -->
+            </div>
+            <div class="guess-info"></div>
+          </div>
+
+          <div class="chart2">
+          </div>
+        </div>
+      </div>
+
+      <div class="chart3-box">
+        <h2>The most profitable company</h2>
+        <div class="chart-row">
+          <div class="chart-desc">
+            <p>
+              The most profitable company is Warner Bros. The wiki link is <a href="https://en.wikipedia.org/wiki/Warner_Bros." target="_blank">here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart4">
+        <h2>Scatter Plot of year vs. profit of all films</h2>
+        <div class="select-row">
+          <div class="select">
+            <label>Company: </label>
+            <select class="company-select"></select>
+          </div>
+        </div>
+        <div class="tooltip">
+          <div class="film-name"></div>
+          <div>companies: <span class="companies"></span></div>
+          <div>release date: <span class="release-date"></span></div>
+          <div>profit: <span class="profit"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/js/movie-data.js"></script>
+    <script src="src/js/App.js"></script>
+  </body>
+</html>
